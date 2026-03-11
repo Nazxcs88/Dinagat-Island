@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore the top tourist attractions of Dinagat Islands — beaches, waterfalls, cultural sites, and more. Plan your island adventure today."
+    />
+    <title>Explore | Dinagat Islands</title>
+
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
+
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <style>
+      .page-hero {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.55)),
+          url("images/intro-pic-primary.webp") center/cover no-repeat;
+        color: #fff;
+        padding: 6rem 2rem;
+        margin-bottom: 4rem;
+      }
+      .page-hero__overline {
+        font-size: 1.3rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        opacity: 0.85;
+        margin-bottom: 1.2rem;
+        display: block;
+      }
+      .page-hero h1 {
+        font-size: clamp(3.6rem, 8vw, 7rem);
+        line-height: 1.05;
+        margin-bottom: 1.5rem;
+        color: #fff;
+      }
+      .page-hero p {
+        font-size: 1.8rem;
+        opacity: 0.9;
+        max-width: 60rem;
+        margin: 0 auto;
+      }
+
+      /* Attraction cards */
+      .s-attractions {
+        padding: 6rem 0;
+      }
+      .attractions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+        gap: 3.2rem;
+        margin-top: 5rem;
+      }
+      .attraction-card {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .attraction-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      }
+      .attraction-card__img-wrap {
+        width: 100%;
+        height: 22rem;
+        overflow: hidden;
+      }
+      .attraction-card__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .attraction-card:hover .attraction-card__img {
+        transform: scale(1.05);
+      }
+      .attraction-card__body {
+        padding: 2.4rem 2.8rem;
+      }
+      .attraction-card__body h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        margin-top: 0;
+      }
+      .attraction-card__body p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+        color: #666;
+        margin-bottom: 1.6rem;
+      }
+      .attraction-card__label {
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #b17a3d;
+        border-bottom: 2px solid #b17a3d;
+        padding-bottom: 2px;
+      }
+    </style>
+  </head>
+
+  <body id="top">
+    <div id="preloader">
+      <div id="loader" class="dots-fade">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div id="page" class="s-pagewrap">
+      <!-- # site header -->
+      <header class="s-header">
+        <div class="container s-header__content">
+          <div class="s-header__block">
+            <div class="header-logo">
+              <a class="logo" href="index.html">
+                <img src="images/logo.png" alt="Dinagat Islands" />
+              </a>
+            </div>
+            <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+          </div>
+
+          <nav class="header-nav">
+            <ul class="header-nav__links">
+              <li><a href="index.html">Home</a></li>
+              <li class="current"><a href="explore.html">Explore</a></li>
+              <li><a href="culture.html">Food &amp; Culture</a></li>
+              <li><a href="visit.html">Visit</a></li>
+            </ul>
+            <div class="header-contact">
+              <a href="visit.html" class="header-contact__num btn"
+                >Plan Your Trip</a
+              >
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- # Page Hero -->
+      <div class="page-hero">
+        <div>
+          <span class="page-hero__overline">Discover the Island</span>
+          <h1>Explore Dinagat</h1>
+          <p>
+            A guide to the island's natural wonders, hidden treasures, and
+            cultural landmarks.
+          </p>
+        </div>
+      </div>
+
+      <!-- # Attractions -->
+      <section id="attractions" class="container s-attractions">
+        <div class="row">
+          <div class="column xl-12">
+            <div class="section-header" data-num="01">
+              <h2 class="text-display-title">Must-See Attractions</h2>
+            </div>
+            <p
+              style="
+                font-size: 1.7rem;
+                max-width: 70rem;
+                color: #555;
+                margin-top: 2rem;
+              "
+            >
+              From crystal-blue lagoons and pristine beaches to lush forest
+              trails and peaceful island towns — Dinagat Islands offers
+              experiences that stay with you long after you leave.
+            </p>
+          </div>
+        </div>
+
+        <div class="attractions-grid">
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-3-1536x1152.jpeg?v=1762775847"
+                alt="Blue Lagoon"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>Blue Lagoon</h3>
+              <p>
+                A breathtaking stretch of electric-blue waters sheltered by lush
+                green hills. One of Dinagat's most iconic natural wonders,
+                perfect for swimming and photography.
+              </p>
+              <span class="attraction-card__label">Nature &amp; Water</span>
+            </div>
+          </div>
+
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-7-1536x1152.jpeg?v=1762775886"
+                alt="Cagdianao Boulevard"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>Cagdianao Boulevard</h3>
+              <p>
+                A scenic seaside promenade lined with coconut palms and ocean
+                views, ideal for an evening stroll. The boulevard is the social
+                heartbeat of Cagdianao town.
+              </p>
+              <span class="attraction-card__label">Town &amp; Scenery</span>
+            </div>
+          </div>
+
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-20-1536x1152.jpeg?v=1762776035"
+                alt="Bonsai Forest"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>Bonsai Forest</h3>
+              <p>
+                A magical grove of naturally stunted trees that resemble giant
+                bonsai, draped in moss and mist. A rare and otherworldly sight
+                found only in Dinagat's highlands.
+              </p>
+              <span class="attraction-card__label">Nature &amp; Trekking</span>
+            </div>
+          </div>
+
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-35-1536x1152.jpeg?v=1762776278"
+                alt="Bitaog Beach"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>Bitaog Beach</h3>
+              <p>
+                Fine white sand and crystal-clear waters, perfect for swimming
+                and snorkeling. One of Dinagat's most accessible and beloved
+                shores for both locals and visitors.
+              </p>
+              <span class="attraction-card__label">Beach</span>
+            </div>
+          </div>
+
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-33-1536x1152.jpeg?v=1762776236"
+                alt="Miracle Pool Cave"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>Miracle Pool Cave</h3>
+              <p>
+                A mystical cave hiding a serene natural pool within its
+                chambers. Locals believe the waters hold healing properties — an
+                almost sacred site on the island.
+              </p>
+              <span class="attraction-card__label">Cave &amp; Mystery</span>
+            </div>
+          </div>
+
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-47-1536x1152.jpeg?v=1762776437"
+                alt="Pagkawasan Garden Beach Resort"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>Pagkawasan Garden Beach Resort</h3>
+              <p>
+                A lush garden resort nestled along a calm beachfront, offering a
+                perfect blend of nature and relaxation. A favorite retreat for
+                families and couples alike.
+              </p>
+              <span class="attraction-card__label">Resort &amp; Beach</span>
+            </div>
+          </div>
+
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-55-1536x1152.jpeg?v=1762777438"
+                alt="San Jose Town"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>San Jose Town</h3>
+              <p>
+                The provincial capital and main gateway to Dinagat Islands. A
+                vibrant town with a bustling port, local markets, and the warm
+                hospitality of Dinagateño life.
+              </p>
+              <span class="attraction-card__label">Town &amp; Culture</span>
+            </div>
+          </div>
+
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-62-1536x1152.jpeg?v=1762777553"
+                alt="Tagbirayan Beach"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>Tagbirayan Beach</h3>
+              <p>
+                A tranquil beach with powdery white sands and calm turquoise
+                waters, tucked away from the crowds. The perfect spot for quiet
+                reflection and undisturbed sunsets.
+              </p>
+              <span class="attraction-card__label">Beach</span>
+            </div>
+          </div>
+
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-67-1536x1152.jpeg?v=1762777584"
+                alt="Cabacongan Beach"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>Cabacongan Beach</h3>
+              <p>
+                A scenic stretch of shoreline with clear waters and gentle
+                waves, ideal for swimming, picnicking, and watching bangka boats
+                glide past as the sun sets.
+              </p>
+              <span class="attraction-card__label">Beach</span>
+            </div>
+          </div>
+
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-77-1536x1152.jpeg?v=1762778533"
+                alt="Duyos Beach"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>Duyos Beach</h3>
+              <p>
+                A secluded and serene beach surrounded by tropical greenery. The
+                calm waters and natural shade make it a favorite for those
+                seeking a quieter island escape.
+              </p>
+              <span class="attraction-card__label">Beach</span>
+            </div>
+          </div>
+
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-89-1536x1152.jpeg?v=1762778774"
+                alt="Dinagat Roads"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>Dinagat Roads</h3>
+              <p>
+                The scenic coastal and mountain roads of Dinagat offer some of
+                the most breathtaking views on the island — a journey through
+                paradise with every turn.
+              </p>
+              <span class="attraction-card__label">Scenic Drive</span>
+            </div>
+          </div>
+
+          <div class="attraction-card">
+            <div class="attraction-card__img-wrap">
+              <img
+                class="attraction-card__img"
+                src="https://philippinetravels.ph/wp-content/uploads/2025/11/image-96-1536x1152.jpeg?v=1762778787"
+                alt="Jelmars Resort"
+              />
+            </div>
+            <div class="attraction-card__body">
+              <h3>Jelmars Resort</h3>
+              <p>
+                A charming island resort known for its crystal waters, cozy
+                accommodations, and warm island hospitality. A great base for
+                exploring the surrounding islands.
+              </p>
+              <span class="attraction-card__label"
+                >Resort &amp; Island Hopping</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- # footer -->
+      <footer id="footer" class="container s-footer">
+        <div class="row s-footer__main">
+          <div class="column xl-3 lg-12 footer-block s-footer__main-start">
+            <div class="s-footer__logo">
+              <a class="logo" href="index.html">
+                <img src="images/logo.png" alt="Dinagat Islands" />
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="column xl-9 lg-12 s-footer__main-end grid-cols grid-cols--wrap"
+          >
+            <div class="grid-cols__column footer-block">
+              <h6>Location</h6>
+              <p>Dinagat Islands, <br />Surigao del Norte, Philippines</p>
+            </div>
+            <div class="grid-cols__column footer-block">
+              <h6>Contacts</h6>
+              <ul class="link-list">
+                <li>
+                  <a href="mailto:info@dinagatislands.gov.ph"
+                    >info@dinagatislands.gov.ph</a
+                  >
+                </li>
+                <li><a href="tel:+630861234567">(086) 123-4567</a></li>
+              </ul>
+            </div>
+            <div class="grid-cols__column footer-block">
+              <h6>Quick Links</h6>
+              <ul class="link-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="culture.html">Food &amp; Culture</a></li>
+                <li><a href="visit.html">Visit Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row s-footer__bottom">
+          <div class="column xl-6 lg-12">
+            <p class="ss-copyright">
+              <span>&copy; Dinagat Islands Tourism Office 2025</span>
+            </p>
+          </div>
+        </div>
+        <div class="ss-go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top">
+            <svg
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
+                fill-rule="nonzero"
+              />
+            </svg>
+          </a>
+          <span>Back To Top</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

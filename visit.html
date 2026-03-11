@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Plan your trip to Dinagat Islands — best time to visit, travel tips, accommodations, and tourism office contact information."
+    />
+    <title>Plan Your Visit | Dinagat Islands</title>
+
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
+
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <style>
+      .page-hero {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.58)),
+          url("images/intro-pic-secondary.jpg") center/cover no-repeat;
+        color: #fff;
+        padding: 6rem 2rem;
+        margin-bottom: 4rem;
+      }
+      .page-hero__overline {
+        font-size: 1.3rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        opacity: 0.85;
+        margin-bottom: 1.2rem;
+        display: block;
+      }
+      .page-hero h1 {
+        font-size: clamp(3.6rem, 8vw, 7rem);
+        line-height: 1.05;
+        margin-bottom: 1.5rem;
+        color: #fff;
+      }
+      .page-hero p {
+        font-size: 1.8rem;
+        opacity: 0.9;
+        max-width: 60rem;
+        margin: 0 auto;
+      }
+
+      /* Best time section */
+      .s-visit-info {
+        padding: 6rem 0;
+      }
+      .visit-info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-top: 4rem;
+      }
+      @media (max-width: 768px) {
+        .visit-info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .info-panel {
+        background: #f8f5f1;
+        border-radius: 10px;
+        padding: 3.5rem 3.5rem;
+      }
+      .info-panel h3 {
+        font-size: 2.4rem;
+        margin-top: 0;
+        margin-bottom: 1.6rem;
+        color: #1a1a1a;
+      }
+      .info-panel p {
+        font-size: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 0;
+      }
+      .info-panel .season-badge {
+        display: inline-block;
+        background: #b17a3d;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        padding: 0.4rem 1.2rem;
+        border-radius: 3rem;
+        margin-bottom: 1.4rem;
+        text-transform: uppercase;
+      }
+
+      /* Tips */
+      .tips-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .tips-list li {
+        padding: 1.2rem 0;
+        padding-left: 3rem;
+        border-bottom: 1px solid #e8e0d5;
+        font-size: 1.5rem;
+        line-height: 1.7;
+        color: #444;
+        position: relative;
+      }
+      .tips-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #b17a3d;
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+      .tips-list li:last-child {
+        border-bottom: none;
+      }
+
+      /* Accommodations */
+      .s-accommodations {
+        padding: 7rem 0;
+        background: #f8f5f1;
+      }
+      .accommodation-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        gap: 2.8rem;
+        margin-top: 4rem;
+      }
+      .accommodation-card {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+      }
+      .accommodation-card:hover {
+        transform: translateY(-4px);
+      }
+      .accommodation-card__img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+        display: block;
+      }
+      .accommodation-card__body {
+        padding: 2.4rem 2.8rem;
+      }
+      .accommodation-card__body h3 {
+        margin-top: 0;
+        margin-bottom: 0.6rem;
+        font-size: 2rem;
+      }
+      .accommodation-card__location {
+        font-size: 1.3rem;
+        color: #b17a3d;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+        display: block;
+      }
+      .accommodation-card__body p {
+        font-size: 1.45rem;
+        line-height: 1.7;
+        color: #666;
+        margin: 0;
+      }
+
+      /* Contact / Map */
+      .s-contact-map {
+        padding: 7rem 0;
+      }
+      .contact-map-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-top: 4rem;
+        align-items: start;
+      }
+      @media (max-width: 900px) {
+        .contact-map-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .contact-info {
+        background: #1a1207;
+        color: #fff;
+        border-radius: 10px;
+        padding: 4rem;
+      }
+      .contact-info h3 {
+        color: #d4a95a;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        font-size: 2.2rem;
+      }
+      .contact-info-item {
+        display: flex;
+        gap: 1.6rem;
+        margin-bottom: 2rem;
+        align-items: flex-start;
+      }
+      .contact-info-item__icon {
+        font-size: 2rem;
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+      }
+      .contact-info-item__text {
+        font-size: 1.45rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .contact-info-item__text strong {
+        display: block;
+        color: #fff;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.4rem;
+        color: #d4a95a;
+      }
+      .contact-info-item__text a {
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .map-container {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+      }
+      .map-container iframe {
+        display: block;
+        width: 100%;
+        height: 42rem;
+        border: 0;
+      }
+    </style>
+  </head>
+
+  <body id="top">
+    <div id="preloader">
+      <div id="loader" class="dots-fade">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div id="page" class="s-pagewrap">
+      <!-- # site header -->
+      <header class="s-header">
+        <div class="container s-header__content">
+          <div class="s-header__block">
+            <div class="header-logo">
+              <a class="logo" href="index.html">
+                <img src="images/logo.png" alt="Dinagat Islands" />
+              </a>
+            </div>
+            <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+          </div>
+
+          <nav class="header-nav">
+            <ul class="header-nav__links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="culture.html">Food &amp; Culture</a></li>
+              <li class="current"><a href="visit.html">Visit</a></li>
+            </ul>
+            <div class="header-contact">
+              <a href="#contact" class="header-contact__num btn smoothscroll"
+                >Contact Us</a
+              >
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- # Page Hero -->
+      <div class="page-hero">
+        <div>
+          <span class="page-hero__overline"
+            >Your Island Journey Starts Here</span
+          >
+          <h1>Plan Your Visit</h1>
+          <p>
+            Everything you need to know before you arrive — from the best season
+            to stay to where to rest your head.
+          </p>
+        </div>
+      </div>
+
+      <!-- # Visit Info: Best Time + Tips -->
+      <section id="info" class="container s-visit-info">
+        <div class="row">
+          <div class="column xl-12">
+            <div class="section-header" data-num="01">
+              <h2 class="text-display-title">Before You Go</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="visit-info-grid">
+          <div class="info-panel">
+            <span class="season-badge">🌞 Best Season</span>
+            <h3>Best Time to Visit</h3>
+            <p>
+              The best time to visit Dinagat Islands is from
+              <strong>March to May</strong> (dry season), when the weather is
+              sunny and seas are calm — ideal for beach activities and island
+              hopping. The island experiences typhoons from July to November, so
+              it's best to avoid travel during this period. The
+              <strong>Kahayag Festival in April</strong> is a wonderful time to
+              combine tourism with a vibrant cultural experience.
+            </p>
+          </div>
+
+          <div class="info-panel">
+            <span class="season-badge">💡 Travel Tips</span>
+            <h3>Tips for Travelers</h3>
+            <ul class="tips-list">
+              <li>
+                Bring cash — ATM availability is limited; there is one BDO
+                branch in San Jose.
+              </li>
+              <li>
+                Respect local and indigenous customs when visiting the PBMA
+                compound or Mamanwa communities.
+              </li>
+              <li>
+                Book ferry tickets in advance during peak season and holidays.
+              </li>
+              <li>
+                Hire a local guide for jungle treks — they know the safest and
+                most scenic paths.
+              </li>
+              <li>
+                Bring reef-safe sunscreen to protect the island's coral
+                ecosystems.
+              </li>
+              <li>
+                Buy from local vendors to directly support the island community.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- # Contact & Map -->
+      <section id="contact" class="container s-contact-map">
+        <div class="row">
+          <div class="column xl-12">
+            <div class="section-header" data-num="02">
+              <h2 class="text-display-title">Find Us</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-map-grid">
+          <div class="contact-info">
+            <h3>Tourism Office</h3>
+
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">📍</div>
+              <div class="contact-info-item__text">
+                <strong>Address</strong>
+                Provincial Capitol Complex, San Jose<br />
+                Dinagat Islands, Surigao del Norte<br />
+                Philippines 8405
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">📧</div>
+              <div class="contact-info-item__text">
+                <strong>Email</strong>
+                <a href="mailto:tourism@dinagatislands.gov.ph"
+                  >tourism@dinagatislands.gov.ph</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">📞</div>
+              <div class="contact-info-item__text">
+                <strong>Phone</strong>
+                <a href="tel:+630861234567">(086) 123-4567</a><br />
+                Mon–Fri, 8:00 AM – 5:00 PM
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">📘</div>
+              <div class="contact-info-item__text">
+                <strong>Facebook</strong>
+                <a href="#0">@DinagatIslandsTourism</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253802.13270596878!2d125.52905964453122!3d10.112999999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3303cdbba3ea29b5%3A0x5dc7b3e39a1b6e0c!2sDinagat%20Islands!5e0!3m2!1sen!2sph!4v1710000000000!5m2!1sen!2sph"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Dinagat Islands Map"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- # footer -->
+      <footer id="footer" class="container s-footer">
+        <div class="row s-footer__main">
+          <div class="column xl-3 lg-12 footer-block s-footer__main-start">
+            <div class="s-footer__logo">
+              <a class="logo" href="index.html">
+                <img src="images/logo.png" alt="Dinagat Islands" />
+              </a>
+            </div>
+          </div>
+          <div
+            class="column xl-9 lg-12 s-footer__main-end grid-cols grid-cols--wrap"
+          >
+            <div class="grid-cols__column footer-block">
+              <h6>Location</h6>
+              <p>Dinagat Islands, <br />Surigao del Norte, Philippines</p>
+            </div>
+            <div class="grid-cols__column footer-block">
+              <h6>Contacts</h6>
+              <ul class="link-list">
+                <li>
+                  <a href="mailto:info@dinagatislands.gov.ph"
+                    >info@dinagatislands.gov.ph</a
+                  >
+                </li>
+                <li><a href="tel:+630861234567">(086) 123-4567</a></li>
+              </ul>
+            </div>
+            <div class="grid-cols__column footer-block">
+              <h6>Quick Links</h6>
+              <ul class="link-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="culture.html">Food &amp; Culture</a></li>
+                <li><a href="visit.html">Visit Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row s-footer__bottom">
+          <div class="column xl-6 lg-12">
+            <p class="ss-copyright">
+              <span>&copy; Dinagat Islands Tourism Office 2025</span>
+            </p>
+          </div>
+        </div>
+        <div class="ss-go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top">
+            <svg
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
+                fill-rule="nonzero"
+              />
+            </svg>
+          </a>
+          <span>Back To Top</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
